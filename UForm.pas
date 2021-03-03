@@ -15,7 +15,7 @@ type
     ListView1: TListView;
     PrototypeBindSource1: TPrototypeBindSource;
     BindingsList1: TBindingsList;
-    LinkFillControlToField1: TLinkFillControlToField;
+    LinkListControlToField1: TLinkListControlToField;
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
   private

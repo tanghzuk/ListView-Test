@@ -9,21 +9,58 @@ object Form2: TForm2
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
   object ListView1: TListView
-    ItemAppearanceClassName = 'TCustomizeItemObjects'
-    ItemEditAppearanceClassName = 'TCustomizeItemObjects'
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
     HeaderAppearanceClassName = 'TListHeaderObjects'
     FooterAppearanceClassName = 'TListHeaderObjects'
+    ItemIndex = 0
     Align = Client
     Size.Width = 640.000000000000000000
     Size.Height = 480.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    ItemAppearanceObjects.ItemObjects.Text.Width = 503.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Text.Height = 44.000000000000000000
-    ItemAppearanceObjects.ItemObjects.GlyphButton.Width = 40.000000000000000000
-    ItemAppearanceObjects.ItemObjects.GlyphButton.Height = 30.000000000000000000
-    ItemAppearanceObjects.ItemObjects.GlyphButton.Visible = True
-    ItemAppearanceObjects.ItemObjects.GlyphButton.PlaceOffset.X = 544.000000000000000000
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 260.000000000000000000
+        Appearance.Height = 22.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text2'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 260.000000000000000000
+        Appearance.Height = 22.000000000000000000
+        Appearance.PlaceOffset.Y = 22.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text3'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 200.000000000000000000
+        Appearance.Height = 22.000000000000000000
+        Appearance.PlaceOffset.X = 260.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'GlyButt'
+        AppearanceClassName = 'TGlyphButtonObjectAppearance'
+        Appearance.Width = 31.000000000000000000
+        Appearance.Height = 32.000000000000000000
+        Appearance.PlaceOffset.X = 520.000000000000000000
+        Appearance.PlaceOffset.Y = 8.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text5'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 200.000000000000000000
+        Appearance.Height = 22.000000000000000000
+        Appearance.PlaceOffset.X = 260.000000000000000000
+        Appearance.PlaceOffset.Y = 22.000000000000000000
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+      end>
     OnItemClick = ListView1ItemClick
   end
   object PrototypeBindSource1: TPrototypeBindSource
@@ -47,14 +84,27 @@ object Form2: TForm2
     OutputConverters = <>
     Left = 20
     Top = 157
-    object LinkFillControlToField1: TLinkFillControlToField
+    object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
+      DataSource = PrototypeBindSource1
       Control = ListView1
-      Track = True
-      FillDataSource = PrototypeBindSource1
-      FillDisplayFieldName = 'ColorsName1'
-      AutoFill = True
-      FillExpressions = <>
+      FillExpressions = <
+        item
+          SourceMemberName = 'ColorsName1'
+          ControlMemberName = 'Text1'
+        end
+        item
+          SourceMemberName = 'ColorsName1'
+          ControlMemberName = 'Text2'
+        end
+        item
+          SourceMemberName = 'ColorsName1'
+          ControlMemberName = 'Text3'
+        end
+        item
+          SourceMemberName = 'ColorsName1'
+          ControlMemberName = 'Text5'
+        end>
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end
