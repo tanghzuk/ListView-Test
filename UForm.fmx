@@ -13,7 +13,7 @@ object Form2: TForm2
     ItemEditAppearanceClassName = 'TDynamicAppearance'
     HeaderAppearanceClassName = 'TListHeaderObjects'
     FooterAppearanceClassName = 'TListHeaderObjects'
-    ItemIndex = 0
+    EditMode = True
     Align = Client
     Size.Width = 640.000000000000000000
     Size.Height = 480.000000000000000000
@@ -60,6 +60,38 @@ object Form2: TForm2
       item
         AppearanceObjectName = 'Text1'
         AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 280.000000000000000000
+        Appearance.Height = 22.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text2'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 280.000000000000000000
+        Appearance.Height = 22.000000000000000000
+        Appearance.PlaceOffset.Y = 22.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text3'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 200.000000000000000000
+        Appearance.Height = 22.000000000000000000
+        Appearance.PlaceOffset.X = 280.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text5'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 200.000000000000000000
+        Appearance.Height = 22.000000000000000000
+        Appearance.PlaceOffset.X = 280.000000000000000000
+        Appearance.PlaceOffset.Y = 22.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'GlyphButton5'
+        AppearanceClassName = 'TGlyphButtonObjectAppearance'
+        Appearance.ButtonType = Checkbox
+        Appearance.Width = 40.000000000000000000
+        Appearance.Height = 44.000000000000000000
+        Appearance.PlaceOffset.X = 528.000000000000000000
       end>
     OnItemClick = ListView1ItemClick
   end
